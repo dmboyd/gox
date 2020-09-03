@@ -96,8 +96,10 @@ var (
 
 	// no new platforms in 1.10
 	Platforms_1_10 = Platforms_1_9
+	
+	Platforms_1_15 = Platforms_1_10[1:] //Drop Darwin 386
 
-	PlatformsLatest = Platforms_1_10
+	PlatformsLatest = Platforms_1_15
 )
 
 // SupportedPlatforms returns the full list of supported platforms for
