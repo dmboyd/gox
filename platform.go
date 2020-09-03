@@ -97,7 +97,45 @@ var (
 	// no new platforms in 1.10
 	Platforms_1_10 = Platforms_1_9
 	
-	Platforms_1_15 = Platforms_1_10[1:] //Drop Darwin 386
+	Platforms_1_15 = []Platform{
+		{"darwin", "amd64", true},
+		{"linux", "386", true},
+		{"linux", "amd64", true},
+		{"linux", "arm", true},
+		{"freebsd", "386", true},
+		{"freebsd", "amd64", true},
+		{"openbsd", "386", true},
+		{"openbsd", "amd64", true},
+		{"windows", "386", true},
+		{"windows", "amd64", true},
+		{"freebsd", "arm", true},
+		{"netbsd", "386", true},
+		{"netbsd", "amd64", true},
+		{"netbsd", "arm", true},
+		{"plan9", "386", false},
+		{"dragonfly", "386", false},
+		{"dragonfly", "amd64", false},
+		{"nacl", "amd64", false},
+		{"nacl", "amd64p32", false},
+		{"nacl", "arm", false},
+		{"solaris", "amd64", false},
+		{"android", "arm", false},
+		{"plan9", "amd64", false},
+		{"darwin", "arm", false},
+		{"darwin", "arm64", false},
+		{"linux", "arm64", false},
+		{"linux", "ppc64", false},
+		{"linux", "ppc64le", false},
+		// While not fully supported s390x is generally useful
+		{"linux", "s390x", true},
+		{"plan9", "arm", false},
+		// Add the 1.6 Platforms, but reflect full support for mips64 and mips64le
+		{"android", "386", false},
+		{"linux", "mips64", true},
+		{"linux", "mips64le", true},
+		{"linux", "mips", true},
+		{"linux", "mipsle", true},
+	}...) //Drop Darwin 386
 
 	PlatformsLatest = Platforms_1_15
 )
