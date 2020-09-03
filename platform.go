@@ -135,7 +135,7 @@ var (
 		{"linux", "mips64le", true},
 		{"linux", "mips", true},
 		{"linux", "mipsle", true},
-	}...) //Drop Darwin 386
+	} //Drop Darwin 386
 
 	PlatformsLatest = Platforms_1_15
 )
